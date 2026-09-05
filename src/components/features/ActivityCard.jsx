@@ -6,7 +6,7 @@ export default function ActivityCard({ activity, onToggle }) {
         <span className="pill">{activity.category}</span>
       </div>
       <h3>{activity.title}</h3>
-      <p>{activity.duration} min · {activity.points} wellbeing points</p>
+      <p>{activity.duration} min · {activity.points} wellbeing point</p>
       <button
         className={activity.completed ? "button secondary" : "button primary"}
         onClick={() => onToggle(activity.id)}
