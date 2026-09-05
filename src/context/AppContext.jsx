@@ -8,16 +8,14 @@ export function AppProvider({ children }) {
   const [appointments, setAppointments] = useState(seedAppointments);
   const [theme, setTheme] = useState("light");
   const [user, setUser] = useState({
-    name: "Alex Morgan",
-    email: "alex@example.com",
-    goal: "Build a consistent wellbeing routine"
+    name: "Himanshu Bhatt",
+    email: "himanshu@gmail.com",
+    goal: "Build a consistent wellbeing routine",
   });
 
   const toggleActivity = (id) => {
     setActivities((current) =>
-      current.map((item) =>
-        item.id === id ? { ...item, completed: !item.completed } : item
-      )
+      current.map((item) => (item.id === id ? { ...item, completed: !item.completed } : item)),
     );
   };
 
@@ -26,9 +24,9 @@ export function AppProvider({ children }) {
       {
         ...appointment,
         id: Date.now(),
-        status: "Upcoming"
+        status: "Upcoming",
       },
-      ...current
+      ...current,
     ]);
   };
 
@@ -41,9 +39,9 @@ export function AppProvider({ children }) {
       toggleActivity,
       addAppointment,
       setTheme,
-      setUser
+      setUser,
     }),
-    [activities, appointments, theme, user]
+    [activities, appointments, theme, user],
   );
 
   return (
