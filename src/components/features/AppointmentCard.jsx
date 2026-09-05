@@ -15,6 +15,7 @@ export default function AppointmentCard({ appointment }) {
           <span className={`status ${appointment.status.toLowerCase()}`}>{appointment.status}</span>
           <span className="muted">{appointment.mode}</span>
         </div>
+        
         <h3>{appointment.type}</h3>
         <p>{appointment.professional}</p>
         <small>{appointment.time}</small>
