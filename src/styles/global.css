@@ -5,6 +5,12 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
+/* ==========================================
+   Layout: App shell, sidebar, topbar
+   ========================================== */
+.app-shell {
+  min-height: 100vh;
+  ...
 
 * { box-sizing: border-box; }
 
